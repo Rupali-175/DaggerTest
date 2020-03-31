@@ -2,6 +2,7 @@ package com.news.daggerpractice.di
 
 import android.app.Application
 import com.news.daggerexample.BaseApplication
+import com.news.daggerexample.di.AppModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -9,7 +10,7 @@ import dagger.android.AndroidInjector
 
 @Component(
     modules = [AndroidInjectionModule::class,
-        TestApp::class]
+        TestApp::class, AppModule::class]
 )
 interface AppComponant : AndroidInjector<BaseApplication> {
 
